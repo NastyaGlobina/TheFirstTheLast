@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0",
+    "nuxt-gsap-module": "^1.7.2",
+    "nuxt-vite": "^0.3.5",
+    "sass": "^1.56.2",
+    "sass-loader": "^13.2.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}

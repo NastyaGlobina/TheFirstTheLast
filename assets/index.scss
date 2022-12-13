@@ -1,0 +1,125 @@
+@import "variables";
+@import "header";
+@import "main";
+@import "footer";
+@import "sidebar";
+@import "svg";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;500&family=Roboto:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background: $bg-color;
+    margin: 0;
+    font-family: "Lexend Giga", sans-serif;
+    letter-spacing: 5px;
+}
+
+h1 {
+    position: absolute;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    background: transparent;
+    font-weight: 700;
+    font-size: 82px;
+    line-height: 90px;
+    text-transform: uppercase;
+    color: $grey;
+    @media (max-width: $lg) {
+        font-size: 58px;
+        line-height: 64px;
+    }
+    @media (max-width: $md) {
+        width: 540px;
+    }
+    @media (max-width: $sm) {
+        width: 350px;
+    }
+    @media (max-width: $xs) {
+        width: 333px;
+        height: 111px;
+        font-size: 34px;
+        line-height: 37px;
+    }
+    &.disable-transform {
+        transform: none;
+    }
+    &.centered {
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+    }
+
+    // h1 .agency {
+    //     @media (max-width: $md) {
+    //         display: initial;
+    //     }
+    // }
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    text-align: center;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $grey;
+    cursor: pointer;
+    @media (max-width: $lg) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @media (max-width: $md) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @media (max-width: $sm) {
+       display: none;
+    }
+
+}
+
+p:hover {
+    color: $white;
+}
+
+.link-hover-solid p:after {
+    background-color: $white;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    -webkit-transition: width 0.4s ease-in-out;
+    -moz--transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.link-hover-solid p:hover:after,
+.link-hover-solid p:focus:after {
+    width: 100%;
+}
+
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+    opacity: 0;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: auto 30px 250px;
+    grid-template-rows: 100px auto 50px;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    height: 100vh;
+}

@@ -1,0 +1,12 @@
+#txt {
+    stroke: black;
+    stroke-width: 4px;
+    font-size: 70px;
+    text-anchor: middle;
+    alignment-baseline: central;
+    fill: url(#top_bottom);
+    
+    @media (max-width: $md) {
+        font-size: 50px;
+    }
+}
